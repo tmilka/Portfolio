@@ -335,3 +335,35 @@ h2 {
     font-size: 0.75rem;
     opacity: 0.6;
 }
+
+@media (max-width: 768px) {
+    /* ... dein Hero Code von oben ... */
+
+    /* Main-Bereich Abstände korrigieren */
+    main.container {
+        padding: 20px 15px; /* Weniger Rand links/rechts auf dem Handy */
+    }
+
+    /* Die Feature-Box (Willkommen zurück) */
+    .feature-box {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Das Grid der Navigations-Karten */
+    .nav-selection-grid {
+        grid-template-columns: 1fr; /* Karten untereinander statt nebeneinander */
+        gap: 15px;
+    }
+
+    .nav-card {
+        padding: 20px;
+        flex-direction: row; /* Icon und Text nebeneinander lassen */
+        justify-content: flex-start;
+    }
+
+    /* Terminal-Header (die drei Punkte rot, gelb, grün) */
+    .terminal-header {
+        justify-content: center; /* Zentriert die Punkte auf dem Handy */
+    }
+}
