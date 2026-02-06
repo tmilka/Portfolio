@@ -237,3 +237,62 @@
     border-top: 1px dashed rgba(56, 189, 248, 0.2);
     padding-top: 10px;
 }
+
+/* =========================================
+   MOBILE ANPASSUNG (Handy & Tablet)
+   ========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. Das Grid untereinander stapeln */
+    .about-grid {
+        grid-template-columns: 1fr; /* Nur noch eine Spalte */
+        gap: 30px;
+        padding-top: 20px;
+    }
+
+    /* 2. Profilbild zentrieren und Größe anpassen */
+    .profile-frame {
+        max-width: 280px; /* Bild nicht über den ganzen Bildschirm dehnen */
+        margin: 0 auto;  /* Zentrieren */
+    }
+
+    /* 3. Texte zentrieren für bessere Lesbarkeit auf Mobile */
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    /* 4. Die Timeline (Zeitstrahl) anpassen */
+    .timeline::before {
+        left: 20px; /* Linie nach links verschieben */
+    }
+
+    .timeline-dot {
+        left: 11px; /* Punkte an der Linie ausrichten */
+    }
+
+    .timeline-item {
+        padding-left: 50px; /* Platz für die Linie links */
+        text-align: left;   /* Text innerhalb der Timeline links lassen */
+    }
+
+    .timeline-date {
+        position: relative;
+        left: 0;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    /* 5. Terminal/Console Box optimieren */
+    .console-theme {
+        font-size: 0.85rem; /* Schrift etwas kleiner, damit nichts umbricht */
+        overflow-x: hidden;
+    }
+
+    .terminal-body {
+        padding: 15px;
+    }
+}
