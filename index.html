@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim´s Space - Home</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-side left">
+            <h1>Willkommen<br>im Space</h1>
+        </div>
+
+        <div class="hero-center-wrapper">
+            <div class="hero-center">
+                <img src="images/figure.png" alt="Hero Character" class="hero-character">
+            </div>
+            <a href="#main-start" class="hero-overlap-btn">Entdecken</a>
+        </div>
+
+        <div class="hero-side right">
+            <p id="typewriter"></p>
+        </div>
+    </div>
+</section>
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="images/Logo.png" alt="Tim's Space Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Terminal/index.html">Terminal</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="main-start"></div>
+
+<main class="container">
+    <section>
+        <h2 class="section-title">System-Status: Online</h2>
+        <div class="feature-box console-theme">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">welcome.exe</span>
+            </div>
+            <div class="terminal-body">
+                <h3>Willkommen in meiner digitalen Welt</h3>
+                <p>
+                    Ich bin <strong>Tim Milker</strong>, ausgebildeter Fachinformatiker für Anwendungsentwicklung aus Bonn. 
+                    Hier dokumentiere ich meine Reise durch die IT-Welt – von der Automatisierung komplexer Abläufe bis hin zur kreativen Entfaltung in der digitalen Kunst.
+                </p>
+                <div class="system-stats-bar" style="display: flex; gap: 20px; margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
+                    <span>[USER: tmilker]</span>
+                    <span>[ROLE: Developer]</span>
+                    <span>[LOC: Bonn_DE]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Kernkompetenzen</h2>
+        <div class="about-grid">
+            
+            <div class="feature-box console-theme">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">dev.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <h4 style="color: var(--accent-color); margin-top: 0;">Development</h4>
+                    <p style="font-size: 0.9rem;">Fokus auf Python, C# und moderne Web-Technologien zur Problemlösung.</p>
+                </div>
+            </div>
+
+            <div class="feature-box console-theme">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">systems.cfg</span>
+                </div>
+                <div class="terminal-body">
+                    <h4 style="color: var(--accent-color); margin-top: 0;">Skills</h4>
+                    <div style="font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6;">
+                        <p style="margin: 5px 0; color: var(--accent-color);">>> INITIALIZING SKILL_CHECK...</p>
+                        <ul style="list-style: none; padding-left: 10px;">
+                            <li><span style="color: #27c93f;">[✓]</span> Web: HTML, CSS, JavaScript</li>
+                            <li><span style="color: #27c93f;">[✓]</span> Code: Python, C#, Java</li>
+                            <li><span style="color: #27c93f;">[✓]</span> Data: MySQL, MongoDB, Azure</li>
+                            <li><span style="color: #27c93f;">[✓]</span> Mgmt: Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Projekt-Fokus</h2>
+        <div class="feature-box project-card highlight-border">
+            <div class="project-header">
+                <div>
+                    <h3 style="margin: 0;">Arcade Box</h3>
+                    <small style="color: var(--accent-color);">Latest Release</small>
+                </div>
+                <span class="badge python">Python / Pygame</span>
+            </div>
+            <p>Mein bisher größtes Software-Projekt: Eine modulare Sammlung von Spieleklassikern, optimiert für Performance und Erweiterbarkeit.</p>
+            <div class="project-links">
+                <a href="projects/arcade_box_details.html" class="btn-small">Projekt-Details</a>
+                <a href="projects.html" class="btn-outline" style="font-size: 0.8rem;">Alle Projekte</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="feature-box console-theme">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">next_step.exe</span>
+            </div>
+            <div class="terminal-body" style="text-align: center; padding: 40px 20px;">
+                <h3 style="text-transform: uppercase; letter-spacing: 2px; color: var(--accent-color);">
+                    Bereit für den nächsten Schritt?
+                </h3>
+                <p style="opacity: 0.8; margin-bottom: 30px;">
+                    Wähle ein Zielverzeichnis aus, um mehr zu erfahren:
+                </p>
+                
+                <div class="nav-selection-grid">
+                    <a href="about.html" class="nav-card">
+                        <span class="nav-icon">01</span>
+                        <div class="nav-desc">
+                            <strong>Über mich</strong>
+                            <small>Werdegang & Skills</small>
+                        </div>
+                    </a>
+                    <a href="projects.html" class="nav-card">
+                        <span class="nav-icon">02</span>
+                        <div class="nav-desc">
+                            <strong>Projekte</strong>
+                            <small>Code & Dokumentation</small>
+                        </div>
+                    </a>
+                    <a href="gallery.html" class="nav-card">
+                        <span class="nav-icon">03</span>
+                        <div class="nav-desc">
+                            <strong>Galerie</strong>
+                            <small>Kreative Arbeiten</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Tim´s Space</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+
+<canvas id="bg-canvas"></canvas>
+
+</html>

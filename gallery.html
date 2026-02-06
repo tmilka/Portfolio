@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim´s Space - Galerie</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body class="gallery-page">
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="images/Logo.png" alt="Tim's Space Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="Terminal/index.html">Terminal</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+        <header class="gallery-hero feature-box">
+            <div class="hero-decoration">
+                <span class="tech-tag">Creative_Mode: Active</span>
+            </div>
+            <h1 class="glitch-text" data-text="Meine Galerie">Meine Galerie</h1>
+            <div class="header-divider"></div>
+            <p class="subtitle">
+                Wo Binärcode auf Pinselstriche trifft. Hier präsentiere ich meine analogen Gemälde und digitalen Experimente.
+            </p>
+        </header>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="Gallery Images/image1.jpg" alt="Kunstwerk 1">
+                <div class="gallery-overlay">
+                    <span class="category">Ölgemälde</span>
+                    <h3 class="art-title">Stille Logik</h3>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="Gallery Images/image2.jpg" alt="Kunstwerk 1">
+                <div class="gallery-overlay">
+                    <span class="category">Ölgemälde</span>
+                    <h3 class="art-title">Stille Logik</h3>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="Gallery Images/image3.jpg" alt="Kunstwerk 1">
+                <div class="gallery-overlay">
+                    <span class="category">Ölgemälde</span>
+                    <h3 class="art-title">Stille Logik</h3>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="Gallery Images/image4.jpg" alt="Kunstwerk 1">
+                <div class="gallery-overlay">
+                    <span class="category">Ölgemälde</span>
+                    <h3 class="art-title">Stille Logik</h3>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="Gallery Images/image5.jpg" alt="Kunstwerk 1">
+                <div class="gallery-overlay">
+                    <span class="category">Ölgemälde</span>
+                    <h3 class="art-title">Stille Logik</h3>
+                </div>
+            </div>
+    </main>
+
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="" alt="Großansicht">
+    </div>
+
+<footer>
+    <p>&copy; 2024 Tim´s space</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

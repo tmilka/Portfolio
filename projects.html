@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim´s Space - Projects</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/projects_main.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">
+                <img src="images/Logo.png" alt="Tim's Space Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="Terminal/index.html">Terminal</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="projects-page">
+    <header class="page-header">
+        <h1>Portfolio & Projekte</h1>
+        <p class="subtitle">Eine Übersicht meiner Arbeiten in der IT-Systemintegration und Softwareentwicklung.</p>
+        
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">Alle</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="datenbank">Datenbank</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+        </div>
+    </header>
+
+    <div class="projects-grid">
+    
+        <div class="project-card" data-category="python">
+            <div class="project-info">
+                <div class="project-tags">
+                    <span class="badge python">Python</span>
+                    <span class="badge">Algorithmen</span>
+                </div>
+                <h3>Advent of Code</h3>
+                <p>Jährliche Programmier-Rätsel, bei denen ich Logik-Probleme und Datenstrukturen effizient löse.</p>
+                <div class="project-links">
+                    <a href="projects/aoc_details.html" class="btn-project">Details</a>
+                    <a href="https://github.com/tmilka/AdventOfCode" class="btn-outline">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" data-category="python">
+            <div class="project-info">
+                <div class="project-tags">
+                    <span class="badge python">Python</span>
+                    <span class="badge">Gaming</span>
+                </div>
+                <h3>Arcade Box</h3>
+                <p>Eine Sammlung klassischer Spiele wie Snake, Pong oder Tetris in modernem Design.</p>
+                <div class="project-links">
+                    <a href="projects/arcade_box_details.html" class="btn-project">Details</a>
+                    <a href="" class="btn-outline">Spielen</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" data-category="datenbank">
+            <div class="project-info">
+                <div class="project-tags">
+                    <span class="badge web">DB</span>
+                    <span class="badge">Utility</span>
+                </div>
+                <h3>Scoreboard</h3>
+                <p>Ein interaktiver Punktezähler für Brettspiele, der Schluss mit Zettel und Stift macht.</p>
+                <div class="project-links">
+                    <a href="projects/scoreboard_details.html" class="btn-project">Details</a>
+                    <a href="projects/scoreboard/scoreboard.html" class="btn-outline">Öffnen</a>
+                </div>
+        </div>
+    </div>
+
+    <div class="project-card" data-category="web">
+        <div class="project-info">
+            <div class="project-tags">
+                <span class="badge web">HTML/JS</span>
+                <span class="badge">Regex</span>
+            </div>
+            <h3>Prefix Checker</h3>
+            <p>Ein Tool zur schnellen Identifizierung von Mobilfunk-Vorwahlen und Anbietern.</p>
+            <div class="project-links">
+                <a href="projects/checker_details.html" class="btn-project">Details</a>
+            </div>
+        </div>
+    </div>
+    <div class="project-card" data-category="web">
+        <div class="project-info">
+            <div class="project-tags">
+                <span class="badge web">HTML/JS</span>
+                <span class="badge">Game</span>
+            </div>
+            <h3>Snake</h3>
+            <p>Eine moderne Web-Interpretation des Klassikers. Implementiert mit reinem JavaScript und einem Grid-basierten Rendering-System</p>
+            <div class="project-links">
+                <a href="projects/snake_details.html" class="btn-project">Details</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card" data-category="web">
+        <div class="project-info">
+            <div class="project-tags">
+                <span class="badge web">HTML/JS</span>
+                <span class="badge">web</span>
+            </div>
+            <h3>Portfolio Webseite</h3>
+            <p>Hier findet man die Dokumentation zur Webseite.</p>
+            <div class="project-links">
+                <a href="projects/protfolio.html" class="btn-project">Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Tim´s space</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+
+<canvas id="bg-canvas"></canvas>
+
+</html>
