@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Prefix Checker - Tim's Space</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body>
+
+<div class="vignette"></div>
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">
+            <img src="..\images/Logo.png" alt="Tim's Space Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="..\index.html">Home</a></li>
+        <li><a href="..\projects.html" class="active">Projects</a></li>
+            <li><a href="..\about.html">About Me</a></li>
+            <li><a href="..\gallery.html">Gallery</a></li>
+            <li><a href="..\terminal.html">Terminal</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<header class="project-detail-header">
+    <div class="container-projects">
+        <a href="../projects.html" class="back-link">../projects/</a>
+        <h1>Prefix Checker</h1>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-value">DE</span>
+                <span class="stat-label">Region</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">RegEx</span>
+                <span class="stat-label">Logic</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container-projects" style="padding-top: 20px;">
+    <div class="feature-box">
+        <h2>Geografische Analyse</h2>
+        <p>
+            Der <strong>Phone Prefix Checker</strong> ist ein webbasiertes Werkzeug, das entwickelt wurde, um geografische Informationen hinter Telefon-Vorwahlen sichtbar zu machen. Mit einem Klick lassen sich Postleitzahlen (PLZ), Bundesländer und Länderkürzel ermitteln.
+        </p>
+    </div>
+
+    <div class="feature-box console-theme">
+        <h2>Kernfunktionen</h2>
+        <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+            <li><strong style="color: var(--accent-color);">• Präfix-Suche:</strong> Schnelle Abfrage von Vorwahlen über ein intuitives Eingabefeld.</li>
+            <li><strong style="color: var(--accent-color);">• Daten-Display:</strong> Übersichtliche Anzeige von Bundesland, PLZ und Region.</li>
+            <li><strong style="color: var(--accent-color);">• Smart Error Handling:</strong> Informative Fehlermeldungen bei ungültigen Eingaben oder fehlenden Datensätzen.</li>
+        </ul>
+        <div class="stats-grid" style="margin-top: 20px;">
+            <div class="stat-box"><span>JSON</span> Data Base</div>
+            <div class="stat-box"><span>Live</span> Search</div>
+        </div>
+    </div>
+
+    <div class="feature-box">
+        <h2>Technologie & Datenbezug</h2>
+        <p>
+            Das Tool nutzt die <strong>Fetch API</strong>, um Daten direkt aus strukturierten JSON-Dateien zu laden. Da Excel-Daten für das Web erst konvertiert werden müssen, nutzt dieses Projekt ein optimiertes JSON-Format für maximale Performance.
+        </p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); font-family: 'Courier New', monospace;">
+            Stack: JavaScript (ES6+) // Fetch API // JSON Assets // CSS Glassmorphism
+        </p>
+    </div>
+
+    <div class="feature-box console-theme" style="text-align: center;">
+        <h2>Zukunftspläne</h2>
+        <p>
+            Geplant sind Erweiterungen wie die Anzeige von Städtenamen, Unterstützung für internationale Vorwahlen sowie eine verbesserte grafische Benutzeroberfläche.
+        </p>
+        <div style="margin-top: 20px;">
+            <a href="https://github.com/tmilka/Phone-prefix-checker" class="btn-project" target="_blank">Code auf GitHub ansehen</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Tim's Space</p>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

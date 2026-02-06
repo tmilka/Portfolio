@@ -1,0 +1,250 @@
+/* =========================================
+   1. Projekt Page
+   ========================================= */
+/* Container für die Karten */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 20px 40px; /* Erzeugt 40px Abstand zu den Seiten */
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Für Mobilgeräte den Rand etwas verkleinern, damit mehr Platz für die Karten bleibt */
+@media (max-width: 768px) {
+    .projects-grid {
+        padding: 20px 20px;
+    }
+}
+
+/* Die einzelne Karte */
+.project-card {
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.2);
+}
+
+/* Bildbereich */
+.project-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+/* Info-Bereich */
+.project-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4rem;
+    color: var(--text-main);
+}
+
+.project-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Buttons in der Karte */
+.project-links {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-project {
+    background: var(--accent-color);
+    color: var(--bg-dark);
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.btn-project:hover {
+    background: #fff;
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* Styling für die Badges innerhalb der Karte */
+.project-tags {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Button-Stile vereinheitlichen */
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 8px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+/* Falls kein Bild vorhanden ist, die Karte oben betonen */
+.project-card:not(:has(.project-image)) {
+    border-top: 3px solid var(--accent-color);
+}
+
+
+
+/* Platzsparender, flacher Header */
+.project-detail-header {
+    padding: 20px 0; /* Deutlich reduziert */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+}
+
+.header-content {
+    display: flex;
+    align-items: baseline; /* Bringt Titel und Stats auf eine Linie */
+    justify-content: space-between; /* Titel links, Stats rechts */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-title-group {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.project-detail-header h1 {
+    font-size: 2.8rem; /* Kleinerer Titel */
+    margin: 0;
+    color: var(--text-main);
+}
+
+.back-link {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+/* Stats jetzt extrem platzsparend nebeneinander */
+.stats-grid {
+    display: flex;
+    gap: 20px;
+    margin: 0; /* Margin entfernt */
+}
+
+.stat-box {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.stat-box span {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.container-projects {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px 30px 20px;
+}
+
+/* Hintergrund
+
+/* 1. Den Hintergrund für den Body festlegen */
+body {
+    background-color: #211D1B; /* Deine Originalfarbe aus der style.css */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* 2. Das Grid (Hinter der Vignette) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(115, 171, 173, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(115, 171, 173, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0; /* Über dem Body-Background */
+    pointer-events: none;
+}
+
+/* 3. Die Vignette (Muss einen höheren z-index haben als das Grid) */
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Der Verlauf geht von transparent in der Mitte zu Schwarz am Rand */
+    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.8) 100%);
+    pointer-events: none; /* WICHTIG: Erlaubt Klicks durch die Ebene hindurch */
+    z-index: 1; 
+}
+
+/* 4. Der Scanline-Effekt (Ganz oben auf der "Röhre") */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.3;
+}

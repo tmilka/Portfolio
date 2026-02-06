@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Tim's Space</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body>
+
+<div class="vignette"></div>
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="../index.html">
+                <img src="../images/Logo.png" alt="Tim's Space Logo" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html" class="active">Projects</a></li>
+            <li><a href="../about.html">About Me</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../terminal.html">Terminal</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="project-detail-header" style="border-color: var(--accent-color);">
+    <div class="container-projects">
+        <a href="../projects.html" class="back-link">../projects/</a>
+        <h1>Tim's Space Portfolio</h1>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-value">v2.0</span>
+                <span class="stat-label">Version</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">Static</span>
+                <span class="stat-label">Architecture</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">100</span>
+                <span class="stat-label">Lighthouse Score</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container-projects" style="padding-top: 20px;">
+    
+    <div class="feature-box">
+        <h2>Vision & Zielsetzung</h2>
+        <p>
+            Ein Portfolio ist mehr als nur eine Visitenkarte – es ist das digitale Äquivalent eines Labors, in dem Theorie auf Praxis trifft. 
+            <strong>Tim's Space</strong> wurde mit dem Anspruch entwickelt, eine Brücke zwischen technischer Präzision und kreativem Design zu schlagen. 
+            Während viele moderne Websites auf überladene Frameworks setzen, basiert dieses Projekt auf der Philosophie des <em>Lean Web Designs</em>: 
+            Maximale Performance durch minimalen Overhead.
+        </p>
+    </div>
+
+    <div class="feature-box console-theme">
+        <h2>Der Technische Stack</h2>
+        <p>Die Seite ist als <strong>Static Site</strong> konzipiert, was extreme Ladegeschwindigkeiten und hohe Sicherheit garantiert.</p>
+        
+        <h3 style="color: var(--accent-color); margin-top: 20px;">1. Hosting & Infrastruktur</h3>
+        <p>
+            Das Hosting erfolgt über <strong>GitHub Pages</strong>. Dies ermöglicht nicht nur eine kostenfreie Bereitstellung, sondern integriert 
+            den gesamten Entwicklungsprozess direkt in die Versionsverwaltung. Jeder `git push` löst automatisch einen Deployment-Workflow aus.
+        </p>
+
+        <h3 style="color: var(--accent-color); margin-top: 20px;">2. CSS Architektur & Designsystem</h3>
+        <p>
+            Anstatt Frameworks wie Bootstrap zu nutzen, wurde das gesamte CSS von Grund auf selbst geschrieben. 
+            Dabei kommen moderne Techniken zum Einsatz:
+        </p>
+        <ul style="color: var(--text-muted); margin-left: 20px; line-height: 1.8;">
+            <li><strong>Custom Properties (Variablen):</strong> Ein zentrales Farbschema in der `base.css` erlaubt es, das gesamte Theme (Dark-Mode, Akzentfarben) an einer einzigen Stelle zu steuern.</li>
+            <li><strong>Flexbox & Grid:</strong> Das Layout ist voll-responsiv. Besonders das Problem des "Sticky Footers" bei wenig Inhalt wurde durch eine intelligente Flex-Struktur gelöst.</li>
+            <li><strong>Glassmorphism:</strong> Durch den Einsatz von `backdrop-filter: blur()` und semi-transparenten Hintergründen entsteht ein moderner, futuristischer Look, der die Tiefe des Weltraum-Themes betont.</li>
+        </ul>
+    </div>
+
+    <div class="feature-box">
+        <h2>Interaktivität & Experience</h2>
+        <p>
+            Um der Seite Leben einzuhauchen, wurden gezielt JavaScript-Komponenten implementiert, die die User Experience (UX) verbessern, ohne die Ladezeit negativ zu beeinflussen:
+        </p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 15px;">
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+                <strong style="color: var(--accent-color);">Dynamic Particle Background</strong>
+                <p style="font-size: 0.9rem;">Ein HTML5 Canvas-System, das im Hintergrund flüssige Sternen-Animationen berechnet.</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px;">
+                <strong style="color: var(--accent-color);">Typewriter Engine</strong>
+                <p style="font-size: 0.9rem;">Ein custom Script auf der Startseite, das Begrüßungstexte dynamisch generiert.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-box console-theme">
+        <h2>Workflow & CI/CD</h2>
+        <p>
+            Die Entwicklung folgt professionellen Standards. Änderungen werden in lokalen Feature-Branches entwickelt und getestet, 
+            bevor sie via Pull Request in den Main-Branch gemerged werden. 
+        </p>
+        <div class="stats-grid" style="margin-top: 20px;">
+            <div class="stat-box"><span>Git</span> Version Control</div>
+            <div class="stat-box"><span>CI/CD</span> GitHub Actions</div>
+            <div class="stat-box"><span>HTTPS</span> SSL Secured</div>
+        </div>
+    </div>
+
+    <div class="feature-box" style="text-align: center; border: 1px dashed var(--accent-color);">
+        <h2>Open Source Spirit</h2>
+        <p>
+            Ich glaube an den Austausch von Wissen. Der gesamte Quellcode dieses Portfolios ist auf GitHub einsehbar – 
+            von der Ordnerstruktur bis hin zu den komplexen CSS-Animationen.
+        </p>
+        <div style="margin-top: 25px;">
+            <a href="https://github.com/tmilka/tmilka.github.io" class="btn-project" target="_blank">Repository erkunden</a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Tim´s Space</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Arcade Box - Tim's Space</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/projects.css">
+</head>
+
+<body>
+ 
+<div class="vignette"></div>   
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">
+            <img src="..\images/Logo.png" alt="Tim's Space Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="..\index.html">Home</a></li>
+        <li><a href="..\projects.html" class="active">Projects</a></li>
+            <li><a href="..\about.html">About Me</a></li>
+            <li><a href="..\gallery.html">Gallery</a></li>
+            <li><a href="..\terminal.html">Terminal</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<header class="project-detail-header">
+    <div class="container-projects">
+        <a href="../projects.html" class="back-link">../projects/</a>
+        <h1>Arcade Box</h1>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-value">4</span>
+                <span class="stat-label">Spiele</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value">Python</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container-projects" style="padding-top: 20px;">
+    <div class="feature-box">
+        <h2>Retro-Gaming pur</h2>
+        <p>
+            Die <strong>Arcade Box</strong> ist eine Python-basierte Spielesammlung, die den Charme klassischer Arcade-Automaten direkt in dein Terminal bringt. 
+            Über ein intuitives Interface kannst du aus einer Vielzahl von Klassikern wählen, die sowohl Glück als auch Strategie fordern.
+        </p>
+    </div>
+
+    <div class="feature-box console-theme">
+        <h2>Enthaltene Spiele</h2>
+        <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+            <li><strong style="color: var(--accent-color);">• Russian Roulette:</strong> Ein nervenaufreibendes Glücksspiel um das Überleben.</li>
+            <li><strong style="color: var(--accent-color);">• Rock Paper Scissors:</strong> Der zeitlose Klassiker gegen die KI.</li>
+            <li><strong style="color: var(--accent-color);">• Guess the Number:</strong> Ein Test für deine Intuition und Logik.</li>
+            <li><strong style="color: var(--accent-color);">• Tic Tac Toe:</strong> Strategie-Duelle gegen Freunde oder den Computer.</li>
+        </ul>
+        <div class="stats-grid" style="margin-top: 20px;">
+            <div class="stat-box"><span>4</span> Spiele</div>
+            <div class="stat-box"><span>Local</span> Highscore</div>
+        </div>
+    </div>
+
+    <div class="feature-box">
+        <h2>Hinter den Kulissen</h2>
+        <p>
+            Das Projekt wurde entwickelt, um die Grundlagen der <strong>Python-Programmierung</strong> und algorithmische Zufallsmechaniken zu vertiefen. 
+            Ein integriertes Scoreboard nutzt Datei-Handling, um deine Fortschritte über verschiedene Sessions hinweg dauerhaft zu speichern.
+        </p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); font-family: 'Courier New', monospace;">
+            Used Tech: Python // Randomization Algos // File I/O
+        </p>
+    </div>
+
+    <div class="feature-box console-theme" style="text-align: center;">
+        <h2>Open Source</h2>
+        <p>Du möchtest den Code sehen oder eigene Spiele hinzufügen?</p>
+        <div style="margin-top: 20px;">
+            <a href="https://github.com/tmilka/Arcade-Box" class="btn-project" target="_blank">Zum GitHub Repository</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Tim's Space</p>
+</footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

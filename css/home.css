@@ -1,0 +1,337 @@
+/* =========================================
+   2. HERO SEKTION (KORRIGIERT)
+   ========================================= */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Padding von 100px auf 20px reduziert, um näher an die Ränder zu rücken */
+    padding: 20px; 
+    box-sizing: border-box;
+    position: relative;
+
+    transition: opacity 0.8s ease, height 0.8s ease, padding 0.8s ease, margin 0.8s ease;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    /* Mittlere Spalte auf 600px erhöht für maximale Desktop-Präsenz */
+    grid-template-columns: 1fr 600px 1fr; 
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 1800px; /* Erlaubt eine weitere Streckung auf Ultra-Wide Monitoren */
+    gap: 10px;
+    padding: 0 20px;
+}
+
+/* Typografie Links */
+.hero-side.left {
+    text-align: right;
+}
+
+.hero-side.left h1 {
+    font-family: 'Segoe UI Black', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    line-height: 0.95;
+    margin: 0;
+}
+
+/* Zentrum: Bild & Stabiler Button */
+.hero-center-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-center {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    padding: 5px; /* Minimaler Rahmen, damit das Bild im Fokus steht */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.hero-character {
+    width: 100%;
+    max-width: 550px; /* Bild darf jetzt bis zu 550px breit werden */
+    height: auto;
+    /* Bild darf nun bis zu 80% der Browserhöhe einnehmen */
+    max-height: 80vh; 
+    display: block;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Der feste Entdecken-Button */
+.hero-overlap-btn {
+    position: absolute;
+    bottom: -15px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    padding: 12px 35px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-overlap-btn:hover {
+    transform: translateX(-50%) scale(1.05);
+    background: #50c8ff;
+}
+
+.hero-overlap-btn:active {
+    transform: translateX(-50%) scale(0.95); /* Button drückt sich beim Klick leicht ein */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Typografie Rechts (Typewriter) */
+.hero-side.right {
+    text-align: left;
+}
+
+#typewriter {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    color: var(--accent-color);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    margin: 0;
+    background: rgba(56, 189, 248, 0.08);
+    padding: 8px 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color);
+    min-height: 1.6em;
+}
+
+.hero-removed {
+    opacity: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    /* Verhindert, dass man den Bereich noch fokussieren kann */
+    visibility: hidden; 
+}
+
+/* =========================================
+   4. LAYOUT & CONTENT BOXEN
+   ========================================= */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 100px 20px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 2rem;
+}
+
+.feature-box {
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Projekt Karten */
+.project-card {
+    border-left: 5px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Basis-Stil für alle Inhalts-Buttons */
+.btn-small, .btn-outline {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* Der gefüllte Button (z.B. Zum Artikel) */
+.btn-small {
+    background-color: var(--accent-color);
+    color: var(--bg-dark); 
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+}
+
+.btn-small:hover {
+    transform: translateY(-2px);
+    background-color: #50c8ff;
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Der Umrandete Button (z.B. Zur Galerie) */
+.btn-outline {
+    background: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-outline:hover {
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Responsive Fix für Tablets/kleine Laptops */
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .hero-side.left, .hero-side.right { text-align: center; }
+    .hero-character { max-width: 240px; }
+}
+
+/* =========================================
+   TITEL & SPEZIAL-AKZENTE
+   ========================================= */
+
+/* Der Haupt-Sektionstitel (z.B. System-Status: Online) */
+.section-title {
+    font-family: 'Segoe UI Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::before {
+    content: ">";
+    font-family: 'Courier New', monospace;
+}
+
+/* Terminal-Header Styling */
+.console-theme {
+    padding: 0 !important; /* Damit der Header bündig abschließt */
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: rgba(115, 171, 173, 0.15);
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(115, 171, 173, 0.2);
+}
+
+.terminal-title {
+    margin-left: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    color: white;
+}
+
+.terminal-body {
+    padding: 25px;
+}
+
+/* Die farbigen Terminal-Punkte */
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+/* Pulse Effekt für den Status */
+.pulse-green {
+    color: #27c93f;
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* Grid für die End-Navigation */
+.nav-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Die einzelnen Navigations-Karten */
+.nav-card {
+    display: flex;
+    align-items: center;
+    background: rgba(115, 171, 173, 0.05);
+    border: 1px solid rgba(115, 171, 173, 0.2);
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.nav-card:hover {
+    background: rgba(115, 171, 173, 0.15);
+    border-color: var(--accent-color);
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(115, 171, 173, 0.1);
+}
+
+.nav-icon {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(115, 171, 173, 0.3);
+}
+
+.nav-desc strong {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.nav-desc small {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}

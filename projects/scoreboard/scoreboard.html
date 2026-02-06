@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard - Terminal Access</title>
+    <link rel="stylesheet" href="scoreboard.css">
+</head>
+<body>
+
+<div class="terminal-container">
+    <div class="feature-box console-theme scoreboard-app">
+        <div class="terminal-header">
+            <div class="dot-container">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">admin@database:~/scoreboard.sh</span>
+            <span id="connection-status" class="status-tag">CONNECTING...</span>
+        </div>
+
+        <div class="terminal-body">
+            <div class="score-controls">
+                <div class="input-group">
+                    <span class="prompt">add_user:</span>
+                    <input id="playerNameInput" type="text" placeholder="NAME">
+                    <button id="add" class="btn-terminal">Execute</button>
+                </div>
+                <div class="input-group">
+                    <span class="prompt">add_game:</span>
+                    <input id="gameNameInput" type="text" placeholder="GAME_TITLE">
+                    <button id="addGameBtn" class="btn-terminal">Execute</button>
+                </div>
+            </div>
+
+            <div class="terminal-divider"></div>
+
+            <div class="table-responsive">
+                <table id="overviewTable">
+                    <thead>
+                        <tr id="overviewHeader">
+                            <th>[RECORD_ID]</th>
+                        </tr>
+                    </thead>
+                    <tbody id="overviewBody">
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="search-section">
+                <h3>> SYSTEM_QUERY_PLAYER_STATS</h3>
+                <div class="input-group">
+                    <span class="prompt">query_id:</span>
+                    <input id="findNameInput" type="text" placeholder="ENTER_NAME">
+                    <button id="find" class="btn-terminal">Query</button>
+                </div>
+                <div id="displayStats" class="terminal-output">Ready for input...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="scoreboard.js"></script>
+</body>
+</html>

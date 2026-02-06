@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advent of Code - Tim's Space</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/snake.css">
+</head>
+<body>
+
+<div class="vignette"></div>
+
+<nav>
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="index.html">
+            <img src="..\images/Logo.png" alt="Tim's Space Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="..\index.html">Home</a></li>
+        <li><a href="..\projects.html" class="active">Projects</a></li>
+            <li><a href="..\about.html">About Me</a></li>
+            <li><a href="..\gallery.html">Gallery</a></li>
+            <li><a href="..\terminal.html">Terminal</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="project-detail-header">
+    <div class="container-projects">
+        <a href="../projects.html" class="back-link">../projects/</a>
+        <h1>Snake OS v1.0</h1>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-value">JS</span>
+                <span class="stat-label">Language</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-value score">0</span>
+                <span class="stat-label">Current Score</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container-projects" style="padding-top: 20px;">
+    <div class="feature-box console-theme">
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">snake_runtime.exe</span>
+        </div>
+        <div class="terminal-body" style="display: flex; flex-direction: column; align-items: center;">
+            
+            <div style="margin-bottom: 10px; font-family: 'Courier New', monospace; color: var(--accent-color);">
+                SCORE: <span class="score">0</span>
+            </div>
+
+            <div class="game-container">
+                <div class="play-board"></div>
+
+                <div id="game-over-overlay" class="game-overlay">
+                    <div class="overlay-content">
+                        <h2 class="terminal-alert">SYSTEM CRASH</h2>
+                        <p id="death-reason">Kollision erkannt</p>
+                        <button onclick="resetGame()" class="btn-small">Reboot System</button>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.6;">
+                Steuerung: Pfeiltasten | Highscore: <span class="high-score">0</span>
+            </p>
+
+            <div class="mobile-controls">
+                <div class="control-row">
+                    <button class="control-btn" onclick="handleTouch('ArrowUp')">▲</button>
+                </div>
+                <div class="control-row">
+                    <button class="control-btn" onclick="handleTouch('ArrowLeft')">◀</button>
+                    <button class="control-btn" onclick="handleTouch('ArrowDown')">▼</button>
+                    <button class="control-btn" onclick="handleTouch('ArrowRight')">▶</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-box console-theme">
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">project_documentation.log</span>
+        </div>
+        <div class="terminal-body">
+            <h2>Projekt-Analyse: Snake OS</h2>
+            <p>
+                Dieses Projekt ist weit mehr als nur ein einfaches Spiel. Es dient als Deep-Dive in die 
+                <strong>prozedurale Programmierung</strong> und das <strong>State-Management</strong> innerhalb einer 
+                Web-Umgebung. Ziel war es, ein performantes Grid-System ohne die Nutzung von schweren Game-Engines zu erschaffen.
+            </p>
+
+            <div class="tech-details-grid">
+                <div class="detail-item">
+                    <h4 style="color: var(--accent-color); margin-bottom: 10px;">> Core Logic</h4>
+                    <ul>
+                        <li>Dynamische Grid-Berechnung</li>
+                        <li>Bidirektionale Steuerung</li>
+                        <li>Futter-Spawn-Algorithmus</li>
+                    </ul>
+                </div>
+                <div class="detail-item">
+                    <h4 style="color: var(--accent-color); margin-bottom: 10px;">> Data Handling</h4>
+                    <ul>
+                        <li>LocalStorage API für Highscores</li>
+                        <li>Array-basiertes Segment-Tracking</li>
+                        <li>Echtzeit-Rendering</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; padding: 15px; background: rgba(115, 171, 173, 0.05); border-radius: 8px;">
+                <h4 style="color: var(--accent-color);">Die Herausforderung</h4>
+                <p style="font-size: 0.95rem; font-style: italic;">
+                    "Die größte Schwierigkeit lag in der präzisen Kollisionsabfrage bei hohen Geschwindigkeiten und der 
+                    Vermeidung von illegalen Richtungswechseln (180°-Wenden), die zum sofortigen Selbst-Crash führen würden."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-box console-theme" style="margin-top: 30px; border-left: 5px solid #ffbd2e;">
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">upcoming_features.patch</span>
+        </div>
+        <div class="terminal-body">
+            <h4 style="color: #ffbd2e; margin-bottom: 15px;">> Geplante System-Upgrades</h4>
+            <p style="font-size: 0.9rem; margin-bottom: 20px;">
+                Die Entwicklung von Snake OS ist ein fortlaufender Prozess. Um die User-Experience zu steigern und die technische Komplexität zu erhöhen, sind folgende Module in der Pipeline:
+            </p>
+
+            <div class="roadmap-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div style="background: rgba(255, 189, 46, 0.05); padding: 15px; border-radius: 8px; border: 1px solid rgba(255, 189, 46, 0.2);">
+                    <strong style="color: #ffbd2e; display: block; margin-bottom: 5px;">01. Dynamic Speed</strong>
+                    <p style="font-size: 0.85rem; opacity: 0.8;">Implementierung eines Schwierigkeits-Algorithmus, der die Taktfrequenz (ms) basierend auf dem aktuellen Score reduziert.</p>
+                </div>
+                
+                <div style="background: rgba(255, 189, 46, 0.05); padding: 15px; border-radius: 8px; border: 1px solid rgba(255, 189, 46, 0.2);">
+                    <strong style="color: #ffbd2e; display: block; margin-bottom: 5px;">02. Ghost Mode</strong>
+                    <p style="font-size: 0.85rem; opacity: 0.8;">Ein seltenes Power-Up, das die Kollisionsabfrage kurzzeitig deaktiviert und das Durchqueren des eigenen Körpers ermöglicht.</p>
+                </div>
+
+                <div style="background: rgba(255, 189, 46, 0.05); padding: 15px; border-radius: 8px; border: 1px solid rgba(255, 189, 46, 0.2);">
+                    <strong style="color: #ffbd2e; display: block; margin-bottom: 5px;">03. Global Leaderboard</strong>
+                    <p style="font-size: 0.85rem; opacity: 0.8;">Anbindung an eine Firebase-Datenbank, um lokale Highscores in eine globale Rangliste zu transformieren.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Tim's Space</p>
+</footer>
+
+<script src="../js/snake.js"></script>
+<script src="../js/script.js"></script>
+
+</body>
+
+<canvas id="bg-canvas"></canvas>
+
+</html>

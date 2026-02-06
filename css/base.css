@@ -1,0 +1,201 @@
+/* =========================================
+   1. GLOBALE VARIABLEN & BASIS-STYLING
+   ========================================= */
+:root {
+    --bg-dark: #0f172a;
+    --nav-bg: #1e293b;
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-color: #38bdf8;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('projects/images/7068.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-main);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 100px 20px;
+}
+
+/* =========================================
+   3. NAVIGATION
+   ========================================= */
+nav {
+    background-color: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 20px;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
+
+.nav-links a.active {
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    background: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Responsive Fix für Tablets/kleine Laptops */
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .hero-side.left, .hero-side.right { text-align: center; }
+    .hero-character { max-width: 240px; }
+}
+
+/* Mobile Anpassung */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+    }
+
+    .nav-container { justify-content: space-between; }
+    .nav-logo { position: static; }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-bg);
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active { display: flex; }
+}
+
+footer {
+    background-color: var(--nav-bg);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+main, 
+.container-projects, 
+.projects-page {
+    flex: 1 0 auto; /* Füllt den verfügbaren Platz aus */
+}
+
+/* Badges für die Technologien */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+}
+
+/* Spezifische Farben für Badges */
+.badge.python { 
+    background-color: rgba(55, 118, 171, 0.15); 
+    color: #4b8bbe; 
+    border-color: rgba(75, 139, 190, 0.4);
+}
+
+.badge.web { 
+    background-color: rgba(241, 224, 90, 0.1); 
+    color: #f1e05a; 
+    border-color: rgba(241, 224, 90, 0.3);
+}
